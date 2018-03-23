@@ -1,0 +1,9 @@
+{
+  "name": "react-redux-notes-app",
+  "version": "1.0.0",
+  "description": "Notes App built with React, Redux, Node and MongoDB",
+  "main": "index.js",
+  "author": "Steve Reid <steve@appby.design>",
+  "license": "ISC",
+  "private": false
+}
