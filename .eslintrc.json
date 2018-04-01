@@ -1,49 +1,55 @@
 {
-  "extends": [
-    "plugin:flowtype/recommended",
-    "airbnb"
-  ],
+  "extends": "airbnb",
   "env": {
     "es6": true,
     "browser": true,
     "node": true
-    },
+  },
   "parser": "babel-eslint",
   "rules": {
     "strict": 0,
     "react/jsx-filename-extension": [
-      1, {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+      1,
+      {
+        "extensions": [".js", ".jsx"]
       }
     ],
     "react/prop-types": 0,
     "react/no-did-update-set-state": 0,
     "func-names": 0,
+    "function-paren-newline": 0,
+    "global-require": 0,
     "no-unused-vars": [
-      1, {
+      1,
+      {
         "argsIgnorePattern": "res|next|^err"
       }
     ],
     "comma-dangle": 0,
     "max-len": 0,
+    "new-cap": 0,
     "no-console": 0,
     "consistent-return": 0,
+    "no-else-return": 0,
     "no-underscore-dangle": 0,
     "no-param-reassign": [
-      2, {
+      2,
+      {
         "props": false
       }
     ],
     "arrow-parens": 0,
-    "space-before-function-paren": ["error", {
+    "space-before-function-paren": [
+      "error",
+      {
         "anonymous": "never",
         "named": "ignore",
         "asyncArrow": "ignore"
-    }],
-    "no-return-await": 0
-    }
+      }
+    ],
+    "no-return-await": 0,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/anchor-is-valid": 0
   }
 }

@@ -1,21 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { connect } from 'react-redux';
+
 import './App.css';
+import NoteList from './components/NoteList';
+import NoteForm from './components/NoteForm';
 
-class App extends Component {
-  render() {
-    return (
+const App = props => {
+  const className = props.isListOpen ? 'is-list-open side-bar' : 'side-bar';
+  return (
+    <div>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className={className}>
+          <NoteList />
+        </div>
+        <div className="main">
+          <NoteForm />
+        </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
-export default App;
+const mapStateToProps = ({ selectors }) => ({
+  isListOpen: selectors.isListOpen
+});
+
+export default connect(mapStateToProps)(App);

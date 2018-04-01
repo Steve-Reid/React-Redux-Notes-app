@@ -1,0 +1,25 @@
+.main {
+  width: 100%;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+form.ui.form {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 1.4rem;
+  padding: 0 1.4rem;
+}
+
+#form-textarea-control-body {
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 799px) {
+  form.ui.form {
+    padding: 0;
+  }
+}

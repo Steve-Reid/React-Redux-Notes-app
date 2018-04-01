@@ -1,0 +1,53 @@
+.header {
+  background: #397ab1;
+  color: #fff;
+  height: 6rem;
+}
+
+.header__content {
+  margin: 0 auto;
+}
+
+.header__content ul {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  max-width: 100rem;
+  padding: 0 1rem;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  margin: 0 47% 0 0;
+}
+
+.header__nav-toggle {
+  cursor: pointer;
+}
+
+.header__nav-image {
+  width: 2rem;
+  height: 2rem;
+}
+
+.header__link,
+.header__logo {
+  list-style: none;
+}
+
+.header__link {
+  height: 100%;
+  /* line-height: 84px; */
+}
+
+.header a {
+  color: #fff;
+}
+
+@media screen and (min-width: 50rem) {
+  .header__nav-toggle {
+    display: none;
+  }
+}

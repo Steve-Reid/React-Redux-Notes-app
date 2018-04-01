@@ -1,0 +1,16 @@
+table#notes-list {
+  margin-top: 1.4rem;
+}
+
+.note-row {
+  transition: background-color 0.5s;
+}
+
+.note-row:hover {
+  background: #f1efef;
+  cursor: pointer;
+}
+
+.note-row.selected {
+  font-weight: bolder;
+}

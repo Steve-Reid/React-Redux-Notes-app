@@ -6,6 +6,18 @@
   "author": "Steve Reid <steve@appby.design>",
   "license": "ISC",
   "private": false,
+  "jest": {
+    "setupTestFrameworkScriptFile": "./tests/setup.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js --ignore tests",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "npm run build",
+    "test": "jest"
+  },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
@@ -13,5 +25,20 @@
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.3",
+    "jest": "^22.4.3",
+    "mongoose": "^5.0.11",
+    "nodemon": "^1.17.2",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "path-parser": "^3.0.1",
+    "puppeteer": "^1.2.0",
+    "redis": "^2.8.0",
+    "uuid": "^3.2.1"
   }
 }
